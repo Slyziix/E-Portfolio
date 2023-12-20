@@ -1118,6 +1118,27 @@ main .service-card {
   padding: 0;
 }
 
+/* Styles pour les légendes des compétences */
+.skills-legends {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.skill-legend {
+  text-align: center;
+}
+
+/* Styles pour la barre unique des compétences */
+.skills-bar {
+  height: 20px;
+  display: flex;
+}
+
+.skill {
+  border-radius: 5px;
+}
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/

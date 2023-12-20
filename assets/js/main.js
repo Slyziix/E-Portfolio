@@ -237,6 +237,7 @@
       once: true,
       mirror: false
     });
+    updateProgressBar();
   });
 
   /**
