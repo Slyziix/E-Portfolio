@@ -58,13 +58,41 @@
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
+        <!-- <a href="https://www.linkedin.com/company/domoti-s-a-s/mycompany/" target="_blank">Domoti</a> -->
         <div class="section-title">
           <h2>Qui suis-je ?</h2>
           <p>Je m'appelle Maxime Murray, je suis actuellement étudiant en BUT Informatique à l'IUT A, situé à Villeneuve d'Ascq.
-            <br> Passionné d'informatique et de nature curieuse j'ai signé un contrat d'alternance chez <a href="https://www.linkedin.com/company/domoti-s-a-s/mycompany/" target="_blank">Domoti</a> pour ma 2e et 3e années de BUT. 
+            <br> Passionné d'informatique et de nature curieuse j'ai signé un contrat d'alternance chez <span class="highlight"
+              id="openPopup"><strong>Domoti</strong></span> pour ma 2e et 3e années de BUT.
             <br> Grâce à cela j'ai développé mon autonomie, mon travail d'équipe et surtout mes compétences techniques.
-            <br> Suite à cela je souhaite continuer mes études en alternance afin d'obtenir un Master en Génie Logiciel.</p>
+            <br> Suite à cela je souhaite continuer mes études en alternance afin d'obtenir un Master en Génie Logiciel.
+          </p>
         </div>
+        
+        <!-- La fenêtre modale -->
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <button id="closePopup">Fermer</button>
+            <p>Domoti est une entreprise de vente à distance sur catalogue spécialisé, elle possède différentes enseignes qui
+              ont chacune leurs types de produits spécifiques :
+              <br>- Temps L : objets du quotidien
+              <br>- Confort et Vie : objets du quotidien
+              <br>- Idées Homme : Articles pour hommes
+              <br>- Atelier de Lucie : produits loisirs créatifs, tricot, broderie ...
+              <br>- Becquet : Linge de lit, de bain
+              <br>- Chien chats et compagnie : produits pour animaux de compagnie
+              <br>- Tout à Créer : Loisirs créatifs pour les fêtes
+              <br>- Marianne Mélodie : les plus belles chansons françaises
+              <br>Ces enseignes possèdent toutes un site web et un catalogue papier afin de toucher un maximum de clients. La
+              majeure partie de leur clientèle se trouve dans la soixantaine, beaucoup ne sont pas encore habitués aux achats
+              via site web, c'est pour cela que le catalogue papier a une grande importance. Actuellement, l'enseigne Becquet
+              représente près de 70% du chiffre d'affaires de l'entreprise.
+            </p>
+          </div>
+        </div>
+
+
+        
 
         <div class="row">
           <div class="col-lg-4">
@@ -214,6 +242,22 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var openPopupButton = document.getElementById('openPopup');
+      var popup = document.getElementById('popup');
+      var closePopupButton = document.getElementById('closePopup');
+
+      openPopupButton.addEventListener('click', function () {
+        popup.style.display = 'block';
+      });
+
+      closePopupButton.addEventListener('click', function () {
+        popup.style.display = 'none';
+      });
+    });
+  </script>
 
 </body>
 
