@@ -17,12 +17,16 @@ a:hover {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
+}
+
+h2{
+  font-family: "Raleway", sans-serif;
+  margin-top: 10px;
 }
 
 #main {
@@ -633,6 +637,10 @@ section {
 
 .about .content p:last-child {
   margin-bottom: 0;
+}
+
+.reduce-padding{
+  width: 25%;
 }
 
 /*--------------------------------------------------------------
