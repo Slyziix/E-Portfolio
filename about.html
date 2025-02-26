@@ -20,6 +20,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -60,11 +61,10 @@
 
         <div class="section-title">
           <h2>Qui suis-je ?</h2>
-          <p>Je m'appelle Maxime Murray, je suis actuellement étudiant en BUT Informatique à l'IUT A, situé à Villeneuve d'Ascq.
-            <br> Passionné d'informatique et de nature curieuse j'ai signé un contrat d'alternance chez <span class="highlight"
-              id="openPopup"><strong><u>Domoti</u></strong></span> pour ma 2e et 3e années de BUT.
+          <p>Je m'appelle Maxime Murray, je suis actuellement en dernière année de BUT Informatique à l'IUT A, situé à Villeneuve d'Ascq.
+            <br> Passionné d'informatique et de nature curieuse, depuis Octobre 2023 je suis également Alternant Développeur FullStack chez <span class="highlight"
+              id="openPopup"><strong><u>Domoti</u></strong></span>.
             <br> Grâce à cela j'ai développé mon autonomie, mon travail d'équipe et surtout mes compétences techniques.
-            <br> Suite à cela je souhaite continuer mes études en alternance afin d'obtenir un Master en Génie Logiciel.
           </p>
         </div>
         
@@ -95,7 +95,7 @@
 
         <div class="row">
           <div class="col-lg-4 reduce-padding">
-            <img src="assets/img/PP.jpg" class="img-fluid" alt="" width="280">
+            <img src="assets/img/PP.jpg" class="img-fluid" alt="" width="250">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content">
             <h3>Étudiant BUT Informatique &amp; Alternant Développeur FullStack</h3>
@@ -123,112 +123,77 @@
     <!-- ======= Skills Section ======= -->
     <section id="skills" class="skills">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
           <h2>Compétences</h2>
-          <p>Mes diverses compétences ont été acquises tout au long de mes études, mais également lors de mes travaux et recherches personnelles.</p>
+          <p>Voici un aperçu des compétences que j'ai acquises lors de ma formation et de mon alternance.</p>
         </div>
-
-        <div class="row skills-content">
-
+    
+        <div class="row">
+          <!-- Compétences Formation -->
           <div class="col-lg-6">
-            <div class="progress">
-              <span class="skill">HTML / CSS</span>
-              <div class="skill-description">Appris durant ma formation en BUT mais aussi lors de la réalisation de ce
-                E-Portfolio</div>
+            <h3><i class="bi bi-book"></i> Compétences acquises en formation</h3>
+            <div class="skill-card" data-aos="fade-right">
+              <h4><i class="bi bi-code-slash"></i> HTML / CSS</h4>
+              <p>Appris durant ma formation et lors de la création de ce portfolio.</p>
             </div>
-            <div class="progress">
-              <span class="skill">SQL</span>
-              <div class="skill-description">Obtenu durant ma formation en BUT mais également pendant mon alternance
-              </div>
+            <div class="skill-card" data-aos="fade-right">
+              <h4><i class="bi bi-database"></i> SQL</h4>
+              <p>Maîtrise des bases de données acquise en BUT.</p>
             </div>
-            <div class="progress">
-              <span class="skill">Java / C#</span>
-              <div class="skill-description"> Acquis lors du BUT et de mon alternance </div>
-            </div>
-            <div class="progress">
-              <span class="skill">Adaptabilité</span>
-              <div class="skill-description"> L'alternance m'a également obligé à m'adapter aux styles de travail de mes collègues <br>mais aussi aux outils utilisés
-              </div>
+            <div class="skill-card" data-aos="fade-right">
+              <h4><i class="bi bi-cpu"></i> Java / C#</h4>
+              <p>Développement backend appris durant le BUT.</p>
             </div>
           </div>
-
+    
+          <!-- Compétences Entreprise -->
           <div class="col-lg-6">
-            <div class="progress">
-              <span class="skill">Travail d'équipe</span>
-              <div class="skill-description"> Grâce à mes différents projets universitaires et mon expérience en
-                entreprise</div>
+            <h3><i class="bi bi-briefcase"></i> Compétences acquises en entreprise</h3>
+            <div class="skill-card" data-aos="fade-left">
+              <h4><i class="bi bi-people"></i> Travail d'équipe</h4>
+              <p>Collaboration avec les équipes pour mener à bien les projets.</p>
             </div>
-            <div class="progress">
-              <span class="skill">Autonomie</span>
-              <div class="skill-description"> Lors de mon alternance j'ai dû faire preuve d'autonomie pour être efficace
-              </div>
+            <div class="skill-card" data-aos="fade-left">
+              <h4><i class="bi bi-shield-lock"></i> Sécurisation d'emails</h4>
+              <p>Développement de programmes pour prévenir l'injection de code.</p>
             </div>
-            <div class="progress">
-              <span class="skill">Écoute active</span>
-              <div class="skill-description"> Pour réaliser mes différents projet j'ai dû faire preuve d'écoute envers les clients <br>mais aussi envers mes collègues et chef de projet
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill">Flexibilité</span>
-              <div class="skill-description"> Travailler en alternance ma forcer à être flexible sur mes compétences
-              </div>
+            <div class="skill-card" data-aos="fade-left">
+              <h4><i class="bi bi-graph-up"></i> Optimisation des applications</h4>
+              <p>Analyse des performances pour améliorer l'efficacité des programmes.</p>
             </div>
           </div>
-
         </div>
-        <section class="services-section">
-          <div class="row">
-            <div class="media service-card col-lg-6">
-              <div class="media-body">
-                <h5 class="service-title">Gestion de projet</h5>
-                <ul>
-                  <li class="service-description">Conduire un projet (De la création du ticket au rendu final)</li>
-                  <li class="service-description">Travailler en équipe (projet de groupe / Git et
-                    Trello)</li>
-                </ul>
-              </div>
-            </div>
-            <div class="media service-card col-lg-6">
-              <div class="media-body">
-                <h5 class="service-title">Sécurisation d'Emails (En apprentissage)</h5>
-                <ul>
-                  <li class="service-description">Création de programme permettant d'empêcher l'injection de code dans un mail</li>
-                  <li class="service-description">Modification de fichier C# pour la sécurisation des mails</li>
-                </ul>
-              </div>
-            </div>
-            <div class="media service-card col-lg-6">
-              <div class="media-body">
-                <h5 class="service-title">Réaliser un développement d'application</h5>
-                <ul>
-                  <li class="service-description">Implémenter des conceptions simples</li>
-                  <li class="service-description">Faire des essais et évaluer leurs résultats en
-                    regard des spécifications</li>
-                </ul>
-              </div>
-            </div>
-            <div class="media service-card col-lg-6">
-              <div class="media-body">
-                <h5 class="service-title">Optimiser des applications informatiques</h5>
-                <ul>
-                  <li class="service-description">Analyser un problème avec méthode (découpage en algorithmes simples,
-                    structures de données...)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
-
-    </section><!-- End Skills Section -->
+    </section>
+    
+    <style>
+      .skill-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+      }
+    
+      .skill-card:hover {
+        transform: translateY(-5px);
+      }
+    
+      .skill-card h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+    </style>
   </main><!-- End #main -->
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
+  <script>
+    AOS.init();
+  </script> 
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -238,9 +203,8 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>   
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var openPopupButton = document.getElementById('openPopup');
