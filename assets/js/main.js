@@ -1,5 +1,3 @@
-console.log("Bienvenu sur mon E-Portfolio")
-
 (function() {
   "use strict";
 
