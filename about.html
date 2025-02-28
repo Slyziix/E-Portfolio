@@ -21,7 +21,6 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -64,26 +63,25 @@
           <h2>Qui suis-je ?</h2>
           <p>Je m'appelle Maxime Murray, je suis actuellement en dernière année de BUT Informatique à l'IUT A, situé à Villeneuve d'Ascq.
             <br> Passionné d'informatique et de nature curieuse, depuis Octobre 2023 je suis également Alternant Développeur FullStack chez <span class="highlight"
-              id="openPopupDomoti"><strong><u>Domoti</u></strong></span>.
+              id="openPopup"><strong><u>Domoti</u></strong></span>.
             <br> Grâce à cela j'ai développé mon autonomie, mon travail d'équipe et surtout mes compétences techniques.
-            <br> Je suis également à la recherche d'un futur emploi pour Septembre 2025, donc si mon profil vous intéresse n'hésitez pas à aller dans l'onglet "Contact"
           </p>
         </div>
         
         <!-- La fenêtre modale -->
-        <div id="popupDomoti" class="popupDomoti">
-          <div class="popupDomoti-content">
-            <button id="closePopupDomoti">Fermer</button>
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <button id="closePopup">Fermer</button>
             <p><a href="https://www.linkedin.com/company/domoti-s-a-s/mycompany/" target="_blank">Domoti</a> est une entreprise de vente à distance sur catalogue spécialisé, elle possède différentes enseignes qui
               ont chacune leurs types de produits spécifiques :
-              <br>- <b>Temps L</b> : objets du quotidien
-              <br>- <b>Confort et Vie</b> : objets du quotidien
-              <br>- <b>Idées Homme</b> : Articles pour hommes
-              <br>- <b>Atelier de Lucie</b> : produits loisirs créatifs, tricot, broderie ...
-              <br>- <b>Becquet</b> : Linge de lit, de bain
-              <br>- <b>Chien chats et compagnie</b> : produits pour animaux de compagnie
-              <br>- <b>Tout à Créer</b> : Loisirs créatifs pour les fêtes
-              <br>- <b>Marianne Mélodie</b> : les plus belles chansons françaises
+              <br>- Temps L : objets du quotidien
+              <br>- Confort et Vie : objets du quotidien
+              <br>- Idées Homme : Articles pour hommes
+              <br>- Atelier de Lucie : produits loisirs créatifs, tricot, broderie ...
+              <br>- Becquet : Linge de lit, de bain
+              <br>- Chien chats et compagnie : produits pour animaux de compagnie
+              <br>- Tout à Créer : Loisirs créatifs pour les fêtes
+              <br>- Marianne Mélodie : les plus belles chansons françaises
               <br>Ces enseignes possèdent toutes un site web et un catalogue papier afin de toucher un maximum de clients. La
               majeure partie de leur clientèle se trouve dans la soixantaine, beaucoup ne sont pas encore habitués aux achats
               via site web, c'est pour cela que le catalogue papier a une grande importance. Actuellement, l'enseigne Becquet
@@ -91,6 +89,9 @@
             </p>
           </div>
         </div>
+
+
+        
 
         <div class="row">
           <div class="col-lg-4 reduce-padding">
@@ -132,40 +133,16 @@
           <div class="col-lg-6">
             <h3><i class="bi bi-book"></i> Compétences acquises en formation</h3>
             <div class="skill-card" data-aos="fade-right">
-              <div class="skill-header">
-                <h4><i class="fa-brands fa-html5"></i> HTML / CSS</h4>
-                <i class="bi bi-plus-circle plus-icon"></i>
-              </div>
+              <h4><i class="bi bi-code-slash"></i> HTML / CSS</h4>
+              <p>Appris durant ma formation et lors de la création de ce portfolio.</p>
             </div>
             <div class="skill-card" data-aos="fade-right">
-              <div class="skill-header">
-                <h4><i class="fa-solid fa-database"></i> PostgreSQL</h4>
-                <i class="bi bi-plus-circle plus-icon"></i>
-              </div>
+              <h4><i class="bi bi-database"></i> SQL</h4>
+              <p>Maîtrise des bases de données acquise en BUT.</p>
             </div>
             <div class="skill-card" data-aos="fade-right">
-              <div class="skill-header">
-                <h4><i class="fa-duotone fa-solid fa-database"></i> NoSQL</h4>
-                <i class="bi bi-plus-circle plus-icon"></i>
-              </div>
-            </div>
-            <div class="skill-card" data-aos="fade-right">
-              <div class="skill-header">
-                <h4><i class="fa-brands fa-java"></i> Java</h4>
-                <i class="bi bi-plus-circle plus-icon"></i>
-              </div>
-            </div>
-            <div class="skill-card" data-aos="fade-right">
-              <div class="skill-header">
-                <h4><i class="fa-brands fa-react"></i></i> JavaScript / React</h4>
-                <i class="bi bi-plus-circle plus-icon"></i>
-              </div>
-            </div>
-            <div class="skill-card" data-aos="fade-right">
-              <div class="skill-header">
-                <h4><i class="bi bi-cpu"></i> WebBack Spring</h4>
-                <i class="bi bi-plus-circle plus-icon"></i>
-              </div>
+              <h4><i class="bi bi-cpu"></i> Java / C#</h4>
+              <p>Développement backend appris durant le BUT.</p>
             </div>
           </div>
     
@@ -184,24 +161,30 @@
               <h4><i class="bi bi-graph-up"></i> Optimisation des applications</h4>
               <p>Analyse des performances pour améliorer l'efficacité des programmes.</p>
             </div>
-            <div class="skill-card" data-aos="fade-left">
-              <h4><i class="bi bi-cpu"></i> C# / ASP.NET</h4>
-              <p>Création et mise à jour d'applications interne</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Popups cachées -->
-        <div id="skillPopup" class="popup" style="display: none;">
-          <div class="popup-content">
-            <span class="close-popup">&times;</span>
-            <p id="popupText">Détails de la compétence ici...</p>
           </div>
         </div>
       </div>
-
-      <div class="separator-line"></div>
     </section>
+    
+    <style>
+      .skill-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+      }
+    
+      .skill-card:hover {
+        transform: translateY(-5px);
+      }
+    
+      .skill-card h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+    </style>
   </main><!-- End #main -->
 
   <div id="preloader"></div>
@@ -225,12 +208,21 @@
       delay: 200 
     });
   </script>
+  </script> 
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      var openPopupButton = document.getElementById('openPopupDomoti');
-      var popup = document.getElementById('popupDomoti');
-      var closePopupButton = document.getElementById('closePopupDomoti');
+      var openPopupButton = document.getElementById('openPopup');
+      var popup = document.getElementById('popup');
+      var closePopupButton = document.getElementById('closePopup');
 
       openPopupButton.addEventListener('click', function () {
         popup.style.display = 'block';
@@ -238,47 +230,6 @@
 
       closePopupButton.addEventListener('click', function () {
         popup.style.display = 'none';
-      });
-    });
-  </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const plusIcons = document.querySelectorAll('.plus-icon');
-
-      const skillDescriptions = {
-          "HTML / CSS": "Durant ma formation j'ai eu l'occasion d'apprendre à développer des sites web grâce au langage Html. <br>J'ai pu peaufiner mes compétences lors de la réalisation de ce E-Portfolio.",
-          "PostgreSQL": "Maîtrise des bases de données relationnelles acquise en BUT. <br>J'ai appris à concevoir des schémas de bases de données, écrire des requêtes SQL complexes, optimiser les performances à l’aide des index et gérer la sécurité des données. <br>J'ai également utilisé PostgreSQL pour des projets nécessitant des relations complexes et une forte intégrité des données.",
-          "NoSQL": "Gestion de bases de données non relationnelles avec MongoDB, Redis et Cassandra. <br>MongoDB pour la flexibilité des documents JSON, Redis pour la mise en cache et la rapidité des accès aux données, et Cassandra pour sa scalabilité et sa tolérance aux pannes. <br>Cette diversité d'outils m'a permis d'adapter mes choix en fonction des besoins des projets.",
-          "Java": "Développement backend robuste avec Java. <br>J'ai utilisé Java pour implémenter des architectures orientées objets, manipuler des API REST, et développer des applications avec le framework Spring Boot. <br>J'ai également appris la gestion des threads, les design patterns et les tests unitaires avec JUnit afin de produire du code fiable et maintenable.",
-          "JavaScript / React": "J'ai appris à développer en JavaScript afin d'utiliser React, cela m'a permis de créer des applications web monopage. <br> Afin d'améliorer mes applications j'ai également pu étudier la bibliothèque Redux qui se concentre sur la construction d'interfaces utilisateurs.",
-          "WebBack Spring": "Durant un semestre, j'ai appris à développer des applications web connectées à une base de données avec le framework Spring. <br>J'ai utilisé Spring Boot pour simplifier la configuration et le déploiement des applications. <br>J'ai implémenté des API REST pour permettre la communication avec le frontend, tout en sécurisant les endpoints grâce à Spring Security et OAuth2. <br>Pour la gestion des données, j'ai utilisé Spring Data JPA afin de simplifier les requêtes SQL et manipuler les entités de manière intuitive. <br>Cela m'a permis de construire des applications complètes, sécurisées et évolutives."
-      };
-    
-      plusIcons.forEach(icon => {
-        icon.addEventListener('click', function (event) {
-          event.stopPropagation(); // Empêche la propagation pour éviter de cliquer sur la carte entière
-        
-          const skillName = icon.closest('.skill-card').querySelector('h4').innerText.trim();
-          const description = skillDescriptions[skillName] || "Pas de description disponible.";
-        
-          const popup = document.createElement('div');
-          popup.className = 'popup';
-          popup.innerHTML = `
-            <div class="popup-content">
-              <span class="close-popup">&times;</span>
-              <h3>${skillName}</h3>
-              <p>${description}</p>
-            </div>
-          `;
-          
-          document.body.appendChild(popup);
-          popup.style.display = 'block';
-          
-          popup.querySelector('.close-popup').addEventListener('click', () => {
-            popup.remove();
-          });
-        });
       });
     });
   </script>
