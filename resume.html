@@ -42,7 +42,7 @@
       
       <div class="header-social-links">
         <a href="https://github.com/Slyziix" target="_blank" class="github"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/maxime-murray-000604227/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="https://www.linkedin.com/in/maxime-murray-000604227/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div>
@@ -53,7 +53,7 @@
 
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
-      <div class="container" data-aos="fade-up">
+      <div class="container-fluid" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Formation</h2>
@@ -87,16 +87,29 @@
           <div class="col-lg-6">
             <h3 class="resume-title">Expérience Professionnelle</h3>
             <div class="resume-item">
-              <h4>Alternant Développeur FullStack</h4>
-              <h5>2023 - 2025</h5>
+              <h4>Alternant Développeur FullStack
+                <i class="bi bi-plus-circle plus-icon" data-bs-toggle="modal" data-bs-target="#experienceModal"></i>
+              </h4>
+              <h5>Octobre 2023 - Août 2025</h5>
               <p><em>Domoti, Marquette-lez-Lille</em><img src="assets/img/LOGO-DOMOTI.jpg"></p>
               <p>
                 Apprentissage des langages : SQL, C#, XML, JSON et des outils Microsoft
               <ul>
-                <li>Création de script SQL à la demande du client (Avec SQL server)</li>
-                <li>Sécurisation d'Emails, bloquage d'injection de code</li>
-                <li>Gestion de projet (Du cahier des charges jusqu'au rendu de projet)</li>
-                <li>Mise en relation des programmes C# et base SQL</li>
+                <li>Création de script SQL à la demande des clients (Avec SQL server)
+                  <ul>
+                    <li>Je programmais de A à Z les procédures afin d'effectuer les extractions de données.</li>
+                  </ul>
+                </li>
+                <li>Sécurisation d'Emails, bloquage d'injection de code
+                  <ul>
+                    <li>Afin d'éviter le piratage lorsque les clients envoient des mails, <br>j'ai mis en place un programme C# permettant de supprimer le contenu HTML inutile.</li>
+                  </ul>
+                </li>
+                <li>Gestion de projet (Du cahier des charges jusqu'au rendu de projet)
+                  <ul>
+                    <li>Je programmais de A à Z les procédures afin d'effectuer les extractions de données.</li>
+                  </ul>
+                </li>
               </ul>
               </p>
             </div>
@@ -107,8 +120,7 @@
               <p>
               <ul>
                 <li>Chargé de rédaction des articles pour "monstagedetroisieme"</li>
-                <li>Récupération des informations nécessaire aux articles 
-                  <br> (recherches internet, rendez-vous avec les personnes concernées)</li>
+                <li>Récupération des informations nécessaire aux articles auprès les personnes concernées</li>
               </ul>
               </p>
             </div>
@@ -132,6 +144,30 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/js/main.js"></script>
 
+  <!-- Popup Modal -->
+  <div class="modal fade" id="experienceModal" tabindex="-1" aria-labelledby="experienceModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="experienceModalLabel">Mon expérience chez Domoti</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Au sein du Groupe Domoti j'ai eu la chance d'être accueillie dans une équipe d'une dizaine de personnes, au début de ma formation je m'occupais principalement de la TMA (Maintenance des matériels et logiciels de l'entreprise)
+          <br>Cela me permettait d'être formé efficacement tout en ayant une utilité concaintre, ainsi j'ai pu monté en compétences et devenir de plus en plus <b>autonome</b>.
+          <br>
+          <br>Par la suite j'ai eu l'occasion de travaillé sur des projets plus importants tels que la prévention des doublons de chèques dans les commandes clients ou encore la refonte d'une application intranet avec l'ajout de nouvelles fonctionnalités.
+          <br>
+          <br>La prévention des doublons de chèques a été le plus important car il avait pour objectif d'éviter les fraudes lorsqu'un client essayer de payer avec un chèque déjà enregistré en base, 
+              j'ai donc travaillé en C# et SQL et est créé un programme traitant automatiquement toutes commandes ayant une erreur (chèque déjà en base, un fichier manquant etc...), mes notions d'algorithmiques se sont également améliorer.
+              Ce projet est celui qui me tient le plus à coeur car il vient d'une <b>prise initiative</b> de ma part auprès de mes supérieurs, j'ai pu découvrir une nouvelle facette du métier avec <b>la gestion de projet</b>. 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
