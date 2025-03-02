@@ -187,11 +187,21 @@
           </div>
         </div>
 
-        <!-- Popups cachées -->
-        <div id="skillPopup" class="popup" style="display: none;">
-          <div class="popup-content">
-            <span class="close-popup">&times;</span>
-            <p id="popupText">Détails de la compétence ici...</p>
+        <!-- Popup Modal Générique -->
+        <div id="genericModal" class="modal fade" tabindex="-1" aria-labelledby="genericModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 id="genericModalLabel" class="modal-title">Détails de la compétence</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div id="genericModalBody" class="modal-body">
+                <p>Contenu dynamique ici...</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -242,14 +252,14 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const plusIcons = document.querySelectorAll('.plus-icon');
-
+        
       const skillDescriptions = {
-          "HTML / CSS": "Durant ma formation j'ai eu l'occasion d'apprendre à développer des sites web grâce au langage Html. <br>J'ai pu peaufiner mes compétences lors de la réalisation de ce E-Portfolio.",
-          "PostgreSQL": "Maîtrise des bases de données relationnelles acquise en BUT. <br>J'ai appris à concevoir des schémas de bases de données, écrire des requêtes SQL complexes, optimiser les performances à l’aide des index et gérer la sécurité des données. <br>J'ai également utilisé PostgreSQL pour des projets nécessitant des relations complexes et une forte intégrité des données.",
-          "NoSQL": "Gestion de bases de données non relationnelles avec MongoDB, Redis et Cassandra. <br>MongoDB pour la flexibilité des documents JSON, Redis pour la mise en cache et la rapidité des accès aux données, et Cassandra pour sa scalabilité et sa tolérance aux pannes. <br>Cette diversité d'outils m'a permis d'adapter mes choix en fonction des besoins des projets.",
-          "Java": "Développement backend robuste avec Java. <br>J'ai utilisé Java pour implémenter des architectures orientées objets, manipuler des API REST, et développer des applications avec le framework Spring Boot. <br>J'ai également appris la gestion des threads, les design patterns et les tests unitaires avec JUnit afin de produire du code fiable et maintenable.",
-          "JavaScript / React": "J'ai appris à développer en JavaScript afin d'utiliser React, cela m'a permis de créer des applications web monopage. <br> Dans le but d'améliorer ces applications j'ai également pu étudier la bibliothèque Redux qui se concentre sur la construction d'interfaces utilisateurs.",
-          "WebBack Spring": "Durant un semestre, j'ai appris à développer des applications web connectées à une base de données avec le framework Spring. <br>J'ai utilisé Spring Boot pour simplifier la configuration et le déploiement des applications. <br>J'ai implémenté des API REST pour permettre la communication avec le frontend, tout en sécurisant les endpoints grâce à Spring Security et OAuth2. <br>Pour la gestion des données, j'ai utilisé Spring Data JPA afin de simplifier les requêtes SQL et manipuler les entités de manière intuitive. <br>Cela m'a permis de construire des applications complètes, sécurisées et évolutives."
+        "HTML / CSS": "Durant ma formation j'ai eu l'occasion d'apprendre à développer des sites web grâce au langage Html. <br>J'ai pu peaufiner mes compétences lors de la réalisation de ce E-Portfolio.",
+        "PostgreSQL": "Maîtrise des bases de données relationnelles acquise en BUT. <br>J'ai appris à concevoir des schémas de bases de données, écrire des requêtes SQL complexes, optimiser les performances à l’aide des index et gérer la sécurité des données. <br>J'ai également utilisé PostgreSQL pour des projets nécessitant des relations complexes et une forte intégrité des données.",
+        "NoSQL": "Gestion de bases de données non relationnelles avec MongoDB, Redis et Cassandra. <br>MongoDB pour la flexibilité des documents JSON, Redis pour la mise en cache et la rapidité des accès aux données, et Cassandra pour sa scalabilité et sa tolérance aux pannes. <br>Cette diversité d'outils m'a permis d'adapter mes choix en fonction des besoins des projets.",
+        "Java": "Développement backend robuste avec Java. <br>J'ai utilisé Java pour implémenter des architectures orientées objets, manipuler des API REST, et développer des applications avec le framework Spring Boot. <br>J'ai également appris la gestion des threads, les design patterns et les tests unitaires avec JUnit afin de produire du code fiable et maintenable.",
+        "JavaScript / React": "J'ai appris à développer en JavaScript afin d'utiliser React, cela m'a permis de créer des applications web monopage. <br> Dans le but d'améliorer ces applications j'ai également pu étudier la bibliothèque Redux qui se concentre sur la construction d'interfaces utilisateurs.",
+        "WebBack Spring": "Durant un semestre, j'ai appris à développer des applications web connectées à une base de données avec le framework Spring. <br>J'ai utilisé Spring Boot pour simplifier la configuration et le déploiement des applications. <br>J'ai implémenté des API REST pour permettre la communication avec le frontend, tout en sécurisant les endpoints grâce à Spring Security et OAuth2. <br>Pour la gestion des données, j'ai utilisé Spring Data JPA afin de simplifier les requêtes SQL et manipuler les entités de manière intuitive. <br>Cela m'a permis de construire des applications complètes, sécurisées et évolutives."
       };
     
       plusIcons.forEach(icon => {
@@ -259,22 +269,16 @@
           const skillName = icon.closest('.skill-card').querySelector('h4').innerText.trim();
           const description = skillDescriptions[skillName] || "Pas de description disponible.";
         
-          const popup = document.createElement('div');
-          popup.className = 'popup';
-          popup.innerHTML = `
-            <div class="popup-content">
-              <span class="close-popup">&times;</span>
-              <h3>${skillName}</h3>
-              <p>${description}</p>
-            </div>
-          `;
-          
-          document.body.appendChild(popup);
-          popup.style.display = 'block';
-          
-          popup.querySelector('.close-popup').addEventListener('click', () => {
-            popup.remove();
-          });
+          // Mise à jour du titre et du contenu de la modale
+          const modalTitle = document.getElementById('genericModalLabel');
+          const modalBody = document.getElementById('genericModalBody');
+        
+          modalTitle.innerHTML = skillName; // Mettre le nom de la compétence dans le titre
+          modalBody.innerHTML = description; // Mettre la description dans le corps de la modale
+        
+          // Afficher la modale
+          const modal = new bootstrap.Modal(document.getElementById('genericModal'));
+          modal.show();
         });
       });
     });
